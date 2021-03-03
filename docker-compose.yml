@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  test_app:
+    build: .
+    environment:
+      - WORKERS=1
+      - NUMBER=13
+    ports:
+      - 1337:1337
