@@ -3,6 +3,8 @@
 # Задача
 
 - Написать функцию *my_func* которая получала число и выполняза GET запросы в  *test_api* диапазоне "test_api/{number}" - "test_api/{number+50}" и возвращал ответ 
+
+```json
 {
   "number": response,
   "number+1": response,
@@ -11,6 +13,8 @@
   ...
   "number+50": response,
 }
+```
+
 
 - Сделать лучшим, на ваш взгляд способом
 
