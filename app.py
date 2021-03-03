@@ -1,5 +1,6 @@
 import asyncio
 import os
+import random
 
 import uvicorn
 from fastapi import FastAPI
@@ -9,9 +10,9 @@ NUMBER = int(os.environ["NUMBER"])
 app = FastAPI()
 
 
-@app.get("/{number:int}")
+@app.get("/test_api/{number:int}")
 async def root(number):
-    await asyncio.sleep(0.2)
+    await asyncio.sleep(random.random())
     return number << NUMBER
 
 

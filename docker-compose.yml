@@ -3,7 +3,7 @@ services:
   test_app:
     build: .
     environment:
-      - WORKERS=1
+      - WORKERS=10
       - NUMBER=13
     ports:
       - 1337:1337
