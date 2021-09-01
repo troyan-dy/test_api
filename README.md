@@ -30,7 +30,7 @@ def my_func(number):
     url = "http://127.0.0.1:8000/"
     result = {}
     for i in range(number, number + 50):
-        r = requests.get(url)
+        r = requests.get(f"{url}{i}")
         result[i] = r.text
     return result
 ```
