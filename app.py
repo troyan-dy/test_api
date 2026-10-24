@@ -7,6 +7,8 @@ from fastapi import FastAPI
 
 WORKERS = int(os.environ["WORKERS"])
 NUMBER = int(os.environ["NUMBER"])
+HOST = "0.0.0.0"
+PORT = 1337
 app = FastAPI()
 
 
@@ -17,4 +19,4 @@ async def root(number):
 
 
 if __name__ == "__main__":
-    uvicorn.run("app:app", host="0.0.0.0", port=1337, workers=WORKERS)
+    uvicorn.run("app:app", host=HOST, port=PORT, workers=WORKERS)
