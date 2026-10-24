@@ -13,10 +13,10 @@ VENV=".venv"
 
 if command -v uv >/dev/null 2>&1; then
   [ -x "$VENV/bin/python" ] || uv venv --quiet --python "$PYTHON_VERSION" "$VENV"
-  uv pip install --quiet --python "$VENV/bin/python" -r requirements.txt
+  uv pip install --quiet --python "$VENV/bin/python" -r requirements-dev.txt
 else
   [ -x "$VENV/bin/python" ] || "python$PYTHON_VERSION" -m venv "$VENV"
-  "$VENV/bin/pip" install --quiet -r requirements.txt
+  "$VENV/bin/pip" install --quiet -r requirements-dev.txt
 fi
 
 if [ -n "${CLAUDE_ENV_FILE:-}" ]; then
